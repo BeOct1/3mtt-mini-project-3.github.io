@@ -13,7 +13,7 @@
 
     <div class="buttons">
       <br>
-      <button onclick="clearInput()" class="Reset" title="Reset">C</button>
+      <button onclick="Reset()" class="reset" title="Reset">C</button>
       <button onclick="Backspace()" class="clear">←</button>
       <button onclick="appendToInput('(')" class="opt">(</button>
       <button onclick="appendToInput(')')" class="opt">)</button>
@@ -51,9 +51,12 @@
         <button onclick="appendToInput('0')">0</button>
         <button onclick="appendToInput('.')" class="opt">.</button>
         <button onclick="calculate()" class="btn-equalto">=</button>
+
     </div>
 
   </div>
+
 <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
 </body>
 </html>
