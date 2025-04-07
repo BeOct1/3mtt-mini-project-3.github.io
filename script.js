@@ -17,7 +17,15 @@ function calculate() {
     const display = document.getElementById('display');
     try {
         const expression = display.value.replace(/\^/g, '**');
-        display.value = eval(expression);
+
+        // Check for division by zero
+        if (expression.includes('/0')) {
+            display.value = 'Error: Division by Zero';
+            return;
+        }
+
+        // Use a safer evaluation method
+        display.value = math.evaluate(expression);
     } catch (error) {
         display.value = 'Error';
     }
